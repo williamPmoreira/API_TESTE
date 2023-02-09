@@ -1,0 +1,6 @@
+services:
+  web:
+    build: .
+    command: gunicorn wsgi:app --bind 0.0.0.0:$PORT
+    ports:
+      - "80:80"
